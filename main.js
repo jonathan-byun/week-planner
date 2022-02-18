@@ -40,6 +40,10 @@ function handleClickDayButton(e) {
     for (var n = 0; n < data.entries[i].length; n++) {
       console.log('data[i]: ', data.entries[i][n]);
       console.log($tableBody.children[n]);
+      const child = $tableBody.children[n].firstElementChild;
+      console.log(child.firstElementChild);
+      child.textContent = data.entries[i][n].time;
+      child.nextElementSibling.textContent = data.entries[i][n].description;
     }
   }
 }
