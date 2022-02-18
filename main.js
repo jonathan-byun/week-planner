@@ -36,12 +36,10 @@ function handleClickDayButton(e) {
   if (e.target.className === 'day-buttons') {
     // console.log(e.target.getAttribute('id'));
     var i = parseInt(e.target.getAttribute('id'));
+    var $tableBody = document.querySelector('tbody');
     for (var n = 0; n < data.entries[i].length; n++) {
       console.log('data[i]: ', data.entries[i][n]);
+      console.log($tableBody.children[n]);
     }
   }
 }
-
-// function populateTable(dayNumber) {
-
-// }

@@ -55,3 +55,27 @@
 .add-entry-button:hover {
   cursor: pointer;
 }
+
+table,
+td,
+th {
+  border-collapse: collapse;
+  border-style: solid;
+  border-width: 1px;
+}
+
+th {
+  background-color: grey;
+}
+
+tr {
+  height: 2rem;
+}
+
+tr:nth-child(odd) {
+  background-color: lightgrey;
+}
+
+table {
+  width: 100%;
+}
