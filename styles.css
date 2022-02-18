@@ -1,7 +1,7 @@
 .container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 800px;
+  max-width: 1200px;
   text-align: center;
 }
 
@@ -26,4 +26,28 @@
   padding: 30px;
   border-radius: 1rem;
   width: 40%;
+}
+
+.column-seventh {
+  flex-basis: calc(80% / 7);
+}
+
+.day-buttons {
+  width: 100%;
+  padding: 2.5rem 0;
+  font-size: 1.25rem;
+}
+
+.day-buttons:hover {
+  cursor: pointer;
+}
+
+.add-entry-button {
+  margin: 2rem;
+  padding: 1rem 4rem;
+  box-shadow: 0.2rem 0.2rem black;
+}
+
+.add-entry-button:hover {
+  cursor: pointer;
 }

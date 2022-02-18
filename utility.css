@@ -21,3 +21,7 @@
 .margin-bottom {
   margin-bottom: 1rem;
 }
+
+.gap {
+  gap: 3rem;
+}
