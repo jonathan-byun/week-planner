@@ -5,10 +5,10 @@ var inputs = document.querySelector('#modal-entry-form').elements;
 const modal = document.querySelector('.modal');
 const addEntryButton = document.querySelector('.add-entry-button');
 
-modalSubmit.addEventListener('submit', handleAddEntry);
+modalSubmit.addEventListener('submit', handleSubmitEntry);
 addEntryButton.addEventListener('click', handleClickAdd);
 
-function handleAddEntry(event) {
+function handleSubmitEntry(event) {
   const entry = {
     day: inputs[0].value,
     time: inputs[1].value,
@@ -27,5 +27,5 @@ function handleAddEntry(event) {
 }
 
 function handleClickAdd(e) {
-
+  modal.classList.remove('hidden');
 }
