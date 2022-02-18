@@ -4,9 +4,11 @@ var modalSubmit = document.querySelector('#modal-entry-form');
 var inputs = document.querySelector('#modal-entry-form').elements;
 const modal = document.querySelector('.modal');
 const addEntryButton = document.querySelector('.add-entry-button');
+const dayButtons = document.querySelector('.day-button-row');
 
 modalSubmit.addEventListener('submit', handleSubmitEntry);
 addEntryButton.addEventListener('click', handleClickAdd);
+dayButtons.addEventListener('click', handleClickDayButton);
 
 function handleSubmitEntry(event) {
   const entry = {
@@ -28,4 +30,10 @@ function handleSubmitEntry(event) {
 
 function handleClickAdd(e) {
   modal.classList.remove('hidden');
+}
+
+function handleClickDayButton(e) {
+  if (e.target.className === 'day-buttons') {
+    console.log(e.target);
+  }
 }
