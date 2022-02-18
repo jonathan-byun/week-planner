@@ -1,5 +1,7 @@
+/* exported data */
+
 var data = {
-  Entries: [[]],
+  entries: [[], [], [], [], [], [], []],
   editing: null,
   nextEntryId: 1
 };
