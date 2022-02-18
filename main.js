@@ -34,11 +34,14 @@ function handleClickAdd(e) {
 
 function handleClickDayButton(e) {
   if (e.target.className === 'day-buttons') {
-    for //asjdfkljal
-    populateTable(i);
+    // console.log(e.target.getAttribute('id'));
+    var i = parseInt(e.target.getAttribute('id'));
+    for (var n = 0; n < data.entries[i].length; n++) {
+      console.log('data[i]: ', data.entries[i][n]);
+    }
   }
 }
 
-function populateTable(dayNumber) {
+// function populateTable(dayNumber) {
 
-}
+// }
