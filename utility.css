@@ -1,0 +1,23 @@
+.hidden {
+  display: none;
+}
+
+.justify-left {
+  justify-content: left;
+}
+
+.justify-right {
+  justify-content: right;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.margin-bottom {
+  margin-bottom: 1rem;
+}

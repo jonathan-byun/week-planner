@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Week Planner</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="utility.css">
 </head>
 <body>
   <div class="container">
@@ -17,7 +18,40 @@
   </div>
   <div class="modal">
     <div class="modal-content">
-      <h1>Add Entry</h1>
+      <div class="row margin-bottom">
+        <h2 class="no-margin">Add Entry</h1>
+      </div>
+      <div class="row justify-left margin-bottom">
+        <select name="day-of-week" id="day-of-week">
+          <option value="sunday">Sunday</option>
+          <option value="monday">Monday</option>
+          <option value="tuesday">Tuesday</option>
+          <option value="wednesday">Wednesday</option>
+          <option value="thursday">Thursday</option>
+          <option value="friday">Friday</option>
+          <option value="saturday">Saturday</option>
+        </select>
+        <select name="time" id="time">
+          <option value="1">1:00</option>
+          <option value="2">2:00</option>
+          <option value="3">3:00</option>
+          <option value="4">4:00</option>
+          <option value="5">5:00</option>
+          <option value="6">6:00</option>
+          <option value="7">7:00</option>
+          <option value="8">8:00</option>
+          <option value="9">9:00</option>
+          <option value="10">10:00</option>
+          <option value="11">11:00</option>
+          <option value="12">12:00</option>
+        </select>
+      </div>
+      <div class="row margin-bottom">
+        <textarea class="width-100" name="description" id="description" cols="30" rows="6" style="resize: none;" placeholder="Description"></textarea>
+      </div>
+      <div class="row justify-right">
+        <button type="submit">Submit</button>
+      </div>
     </div>
   </div>
 
