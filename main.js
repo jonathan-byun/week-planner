@@ -34,6 +34,11 @@ function handleClickAdd(e) {
 
 function handleClickDayButton(e) {
   if (e.target.className === 'day-buttons') {
-    console.log(e.target);
+    for //asjdfkljal
+    populateTable(i);
   }
+}
+
+function populateTable(dayNumber) {
+
 }
