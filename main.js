@@ -5,10 +5,12 @@ var inputs = document.querySelector('#modal-entry-form').elements;
 const modal = document.querySelector('.modal');
 const addEntryButton = document.querySelector('.add-entry-button');
 const dayButtons = document.querySelector('.day-button-row');
+const tbody = document.querySelector('tbody');
 
 modalSubmit.addEventListener('submit', handleSubmitEntry);
 addEntryButton.addEventListener('click', handleClickAdd);
 dayButtons.addEventListener('click', handleClickDayButton);
+tbody.addEventListener('click', handleClickTable);
 
 function handleSubmitEntry(event) {
   const entry = {
@@ -46,11 +48,16 @@ function handleClickDayButton(e) {
       child.textContent = data.entries[i][n].time;
       var newDescriptionTd = document.createElement('td');
       var tdButton = document.createElement('button');
-      tdButton.textContent = 'Edit';
+      var newDiv = document.createElement('div');
+      newDiv.className = 'row justify-space-between align-center';
+      tdButton.textContent = 'Update';
+      tdButton.classList.add('update-button');
+      tdButton.classList.add(n);
       var tdText = document.createElement('p');
       tdText.textContent = data.entries[i][n].description;
-      newDescriptionTd.appendChild(tdText);
-      newDescriptionTd.appendChild(tdButton);
+      newDescriptionTd.appendChild(newDiv);
+      newDiv.appendChild(tdText);
+      newDiv.appendChild(tdButton);
       $tableBody.children[n].appendChild(newDescriptionTd);
       child.nextElementSibling.remove();
       // child.nextElementSibling.textContent = data.entries[i][n].description;
@@ -69,5 +76,12 @@ function handleClickDayButton(e) {
         $tableBody.children[j].firstElementChild.nextElementSibling.textContent = '';
       }
     }
+  }
+}
+
+function handleClickTable(e) {
+  if (e.target.className.includes('update-button')) {
+    // console.log('inside');
+
   }
 }

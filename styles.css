@@ -56,6 +56,11 @@
   cursor: pointer;
 }
 
+.update-button {
+  height: 1.5rem;
+  margin-right: 2rem;
+}
+
 table,
 td,
 th {
@@ -83,4 +88,8 @@ tr:nth-child(odd) {
 
 table {
   width: 100%;
+}
+
+td > p {
+  display: inline;
 }
