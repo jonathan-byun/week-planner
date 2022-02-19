@@ -44,7 +44,16 @@ function handleClickDayButton(e) {
       const child = $tableBody.children[n].firstElementChild;
       console.log(child.firstElementChild);
       child.textContent = data.entries[i][n].time;
-      child.nextElementSibling.textContent = data.entries[i][n].description;
+      var newDescriptionTd = document.createElement('td');
+      var tdButton = document.createElement('button');
+      tdButton.textContent = 'Edit';
+      var tdText = document.createElement('p');
+      tdText.textContent = data.entries[i][n].description;
+      newDescriptionTd.appendChild(tdText);
+      newDescriptionTd.appendChild(tdButton);
+      $tableBody.children[n].appendChild(newDescriptionTd);
+      child.nextElementSibling.remove();
+      // child.nextElementSibling.textContent = data.entries[i][n].description;
       remaining = n;
     }
 
