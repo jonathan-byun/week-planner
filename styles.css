@@ -86,6 +86,10 @@ tr:nth-child(odd) {
   background-color: lightgrey;
 }
 
+td:nth-child(odd) {
+  width: 20%;
+}
+
 table {
   width: 100%;
 }

@@ -54,6 +54,7 @@ function handleClickDayButton(e) {
       tdButton.classList.add('update-button');
       tdButton.classList.add(n);
       var tdText = document.createElement('p');
+      tdText.setAttribute('class', 'no-margin');
       tdText.textContent = data.entries[i][n].description;
       newDescriptionTd.appendChild(newDiv);
       newDiv.appendChild(tdText);
@@ -82,6 +83,7 @@ function handleClickDayButton(e) {
 function handleClickTable(e) {
   if (e.target.className.includes('update-button')) {
     // console.log('inside');
+    console.log(e.target.className);
 
   }
 }
