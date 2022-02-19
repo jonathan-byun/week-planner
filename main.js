@@ -37,6 +37,7 @@ function handleClickDayButton(e) {
     // console.log(e.target.getAttribute('id'));
     var i = parseInt(e.target.getAttribute('id'));
     var $tableBody = document.querySelector('tbody');
+    var remaining = 0;
     for (var n = 0; n < data.entries[i].length; n++) {
       console.log('data[i]: ', data.entries[i][n]);
       console.log($tableBody.children[n]);
@@ -44,6 +45,20 @@ function handleClickDayButton(e) {
       console.log(child.firstElementChild);
       child.textContent = data.entries[i][n].time;
       child.nextElementSibling.textContent = data.entries[i][n].description;
+      remaining = n;
+    }
+
+    if (data.entries[i].length === 0) {
+      for (var j = 0; j < 8; j++) {
+        $tableBody.children[j].firstElementChild.textContent = '';
+        $tableBody.children[j].firstElementChild.nextElementSibling.textContent = '';
+      }
+    } else {
+      remaining++;
+      for (j = remaining; j < 8; j++) {
+        $tableBody.children[j].firstElementChild.textContent = '';
+        $tableBody.children[j].firstElementChild.nextElementSibling.textContent = '';
+      }
     }
   }
 }
